@@ -83,7 +83,7 @@ class PyCalc(QMainWindow):
 		return self.display.text()
 
 	#Clear the display
-	def clearDispaly(self):
+	def clearDisplay(self):
 		self.setDisplayText('')
 
 #Client Mode

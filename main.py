@@ -1,6 +1,7 @@
 #main program 
 import sys
 import gui_design
+import controller
 from PyQt5.QtWidgets import QApplication
 def main():
 	#Create an instance of QApplication
@@ -8,6 +9,8 @@ def main():
 	#show the calculator's GUI
 	view = gui_design.PyCalc()
 	view.show()
+	#Create the instance of the model and the controller
+	controller.PyCalcCtrl(view=view)
 	sys.exit(app.exec())
 
 
