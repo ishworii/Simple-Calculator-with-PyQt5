@@ -1,6 +1,7 @@
-#Controller class to connect the GUI and the model
+ERROR_MSG = 'ERROR'
 from functools import partial
 from gui_design import *
+#Controller class to connect the GUI and the model
 class PyCalcCtrl:
 	
 	def __init__(self,view):
@@ -19,4 +20,11 @@ class PyCalcCtrl:
 				btn.clicked.connect(partial(self._buildExpression,btnText))
 
 		self._view.buttons['C'].clicked.connect(self._view.clearDisplay)
-	 
+
+#Model to handle the calculator's operation
+def evaluateExpression(expression):
+	try:
+		result = str(eval(expression, {}, {}))
+	except Exception:
+		result = ERROR_MSG
+	return result
