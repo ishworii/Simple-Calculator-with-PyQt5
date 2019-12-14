@@ -10,7 +10,8 @@ def main():
 	view = gui_design.PyCalc()
 	view.show()
 	#Create the instance of the model and the controller
-	controller.PyCalcCtrl(view=view)
+	model = controller.evaluateExpression
+	controller.PyCalcCtrl(model=model,view=view)
 	sys.exit(app.exec())
 
 
