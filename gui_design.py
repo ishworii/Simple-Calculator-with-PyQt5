@@ -86,15 +86,4 @@ class PyCalc(QMainWindow):
 	def clearDisplay(self):
 		self.setDisplayText('')
 
-#Client Mode
-def main():
-	#Create an instance of QApplication
-	app = QApplication(sys.argv)
-	#show the calculator's GUI
-	view = PyCalc()
-	view.show()
-	sys.exit(app.exec())
 
-
-if __name__ == '__main__':
-	main()
